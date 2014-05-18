@@ -24,10 +24,10 @@ namespace TweetIndexer
             MongoServer mongoServer = mongoClient.GetServer();
             MongoDatabase db = mongoServer.GetDatabase("test");
             var collection = db.GetCollection<TweetItem>("TweetItems");
-            DateTime dtmFirst = DateTime.Now;
+            DateTime dtmFirst = DateTime.Now.AddDays(-1);
             dtmFirst = dtmFirst.AddHours(-dtmFirst.Hour);
             dtmFirst = dtmFirst.AddMinutes(-dtmFirst.Minute);
-            DateTime dtmLast = DateTime.Now.AddDays(1);
+            DateTime dtmLast = DateTime.Now;
             dtmLast = dtmLast.AddHours(-dtmLast.Hour);
             dtmLast = dtmLast.AddMinutes(-dtmLast.Minute);
             var query = Query<TweetItem>.Where(t => t.CreationDate >= dtmFirst && t.CreationDate < dtmLast);
