@@ -24,13 +24,11 @@ namespace TweetIndexer
             MongoServer mongoServer = mongoClient.GetServer();
             MongoDatabase db = mongoServer.GetDatabase("test");
             var collection = db.GetCollection<TweetItem>("TweetItems");
-            DateTime dtmFirst = DateTime.Now.AddDays(-1);
-            dtmFirst = dtmFirst.AddHours(-dtmFirst.Hour);
-            dtmFirst = dtmFirst.AddMinutes(-dtmFirst.Minute);
+            DateTime dtmFirst = new DateTime(2014, 05, 17);
             DateTime dtmLast = DateTime.Now;
             dtmLast = dtmLast.AddHours(-dtmLast.Hour);
             dtmLast = dtmLast.AddMinutes(-dtmLast.Minute);
-            var query = Query<TweetItem>.Where(t => t.CreationDate >= dtmFirst && t.CreationDate < dtmLast);
+            var query = Query<TweetItem>.Where(t => t.CreationDate >= dtmFirst);
             List<TweetItem> value = collection.Find(query).ToList();
             FSDirectory dir = FSDirectory.GetDirectory(Environment.CurrentDirectory + "\\LuceneIndex");
             //Lucene.Net.Store.RAMDirectory dir = new RAMDirectory();
