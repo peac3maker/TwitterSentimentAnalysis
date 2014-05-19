@@ -1,0 +1,25 @@
+     
+
+The Fierce Battle for the Soul of Bitcoin
+
+    By Robert McMillan  
+    03.26.14  |  
+    6:30 am  |  
+    Permalink
+
+Adam Voorhes Gail Anderson + Joe Newton
+
+Before most people had ever heard of the digital currency bitcoin, Brian Armstrong, a 27-year-old engineer at the home-sharing website Airbnb, thought it could make him a lot of money. At the time—spring 2012—Airbnb was moving a reported $500 million in payments annually in 192 countries through a patchwork of financial networks, and each one claimed a transaction fee. An anonymous, encrypted, government-free online version of money would simplify all that. It would be faster, more secure, and vastly cheaper.
+
+The problem was that the things that made bitcoin attractive also made it bewildering for noncoders. Using it required balky and hard-to-use software called a wallet. Bitcoins were also a challenge to obtain—mostly you had to purchase them from middlemen who operated in the regulatory shadows and who sometimes turned out to be crooks. The money was hard to spend, because few merchants accepted it—the currency was just too new. Armstrong realized that the way to widespread acceptance of bitcoin was a user-friendly wallet.
+
+He wasn’t the only one thinking about bitcoin’s broader potential. On a discussion forum about the currency, Armstrong met Ben Reeves, a British programmer who ran a bitcoin transaction-tracking website called Blockchain. Reeves understood the technology and was well respected within its tight-knit community of enthusiasts. He had been using bitcoin for a year already and had even built a bitcoin wallet that 10,000 people had tried out. Reeves also wanted to see the currency gain more traction. The two men hit it off and started spitballing ideas for a new kind of company: a PayPal for bitcoin. It would serve as a trusted broker of the cryptocurrency, taking a 0.5 percent charge anytime anyone converted dollars to bitcoins or vice versa. But spending money within the bitcoin network would be essentially free. With a digital wallet and payment-processing services, you could, say, pay that cash-only cab driver with bitcoins via your smartphone. They pitched the concept to the prestigious and highly selective tech-company incubator Y Combinator—and within hours had an invitation to join the class of summer 2012.
+
+But the relationship soon ran into trouble. Armstrong felt that in order for bitcoin to gain mass acceptance, users who lost their wallet passwords would need a way of recovering them. That meant their new company would have to retain access to users’ private keys—the 64-character access codes that convey bitcoin ownership. Without that access, users could forever forfeit their entire bitcoin fortune as easily as forgetting their password.
+
+Reeves disagreed completely. The whole point of bitcoin was that it put the person with the bitcoins in control. If you gave some company access to your bitcoins, you were essentially trusting it as you would a bank. It could lose them to hackers or, worse, steal them outright. These rip-offs were already an all-too-common occurrence in the nascent bitcoin world. If Reeves and Armstrong’s company maintained a backdoor into all of its customers’ wallets, it would be only a matter of time before the government began issuing subpoenas. Yes, the current system meant that users took on more risk, and that would probably turn off some of the more casual ones. But bitcoin wasn’t meant for them anyway. Though Reeves planned to build a currency for everyone, he wanted to start with the geeks. “There simply are not that many reasons why the average person would want to use bitcoin,” he wrote.
+
+The hammer fell just 48 hours before Reeves was supposed to get on a plane to fly to Silicon Valley. Armstrong’s email was diplomatic, even kind. Still, like all breakups, it hurt. “Cofounding is really like a marriage,” Armstrong wrote, “and even though I think we have mutual respect for each other, we don’t work together extremely well.” Armstrong cut Reeves off from their shared online accounts. “I think we have pretty different aesthetics around what sort of product to build,” Armstrong wrote. He was going to Y Combinator alone. Reeves was out.
+A Flash Guide to Bitcoin
+
+The digital currency may have begun as an experiment for techno-libertarians and geeks, but today it’s growing into something much bigger. Still, that doesn’t make it any less complicated than when it was first introduced on a cryptography listserv in 2008. Here’s how bitcoin actually works. —Cameron Bird

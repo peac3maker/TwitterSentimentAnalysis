@@ -1,0 +1,65 @@
+Virtual currencies, meet the real world.
+
+The IRS has determined that bitcoin will be treated as property for tax purposes, and not currency. What does that mean for a digital currency? Michael Casey joins MoneyBeat.
+
+The Internal Revenue Service made its first pronouncement on the issue Tuesday, saying it will treat bitcoin and other virtual currencies like property such as stocks, and not currency, giving a potential boost to investors but imposing extensive record-keeping rules. The rule generally would impose capital-gains taxes, rather than higher regular tax rates, on investors' profits.
+
+The announcement brought cautiously favorable reaction from the fledgling industry. But some experts predicted problems for bitcoin as well as for the IRS in enforcing the reporting and withholding requirements in the guidance.
+
+"The bitcoin community has been looking for guidance on this issue for some time, and the notice from the IRS should first and foremost be viewed as a validation that bitcoin is becoming recognized as an innovative technology," CoinDesk, an online news source that runs a bitcoin pricing index, said in a statement.
+
+It added there is "likely to be a debate" within the bitcoin world about specifics of the IRS framework, but it hopes the ruling "helps move the conversation about digital currencies forward."
+More Reading
+
+    IRS Notice on Bitcoin
+    Q&A: What Do the New Rules Mean?
+
+Previously
+
+    ECB's Mersch: Virtual Currencies Not a Threat to Stability
+    U.S. Treasury's Cohen Warns Unregistered Bitcoin Exchanges
+    Japan Says Bitcoin Not a Currency
+    MoneyBeat: What if the Bitcoin End Game is a Digital Dollar?
+    U.K. Nears Rules on Taxing Bitcoin
+
+Bitcoin is often in the news, but if you don't own the currency, why should you care? From coding to crime, governments, banks and the end of money, The Wall Street Journal's Simon Constable explains.
+
+Sen. Tom Carper (D., Del.), chairman of the Senate Homeland Security and Governmental Affairs Committee, said in a statement that he was "pleased the IRS is taking this important step to provide clarity for taxpayers."
+
+But the announcement also served as a reminder that new technologies often can't avoid running into the old rules.
+
+In a notice, the IRS said that if the virtual currency is held for investment, any gains would be treated as capital gains, meaning they could be subject to lower tax rates. But capital losses from bitcoin investments often would be limited, whereas currency losses can be easier to deduct upfront.
+
+The IRS guidance targets a new crop of digital currencies used by a small but growing number of merchants, consumers and investors. Bitcoin, the best-known of the group, is created using a computer process and can be exchanged for dollars online.
+
+All the bitcoin in the world were worth about $7.25 billion on Tuesday afternoon, according to the CoinDesk price index.
+
+Some bitcoin users adopted the technology because it isn't backed by any country, but its growing popularity has brought the scrutiny of regulators. While other countries have outlawed bitcoin, U.S. regulators have generally said it must meet existing laws regarding money laundering, fraud and other issues.
+
+Tax authorities in the U.K., Canada and Finland have said profits on bitcoin investments should be taxed under their existing rules for capital gains.
+
+The IRS notice also made clear that people involved in handling virtual currencies—and transactions involving them—typically would be subject to the same extensive record-keeping requirements, and taxes, as other people and other deals.
+
+Notably, use of bitcoin in a retail transaction typically would be a taxable "event" for many buyers, requiring them to figure out the gain they had made on the virtual currency, and eventually pay tax on it.
+
+WSJD is the Journal's home for tech news, analysis and product reviews.
+
+    Review: HTC One (M8): Best Android Phone Gets Even Better
+    Is H-P Getting Its Mojo Back?
+    Google Fashions Luxottica Deal to Bring Glass to Ray-Ban, Oakley
+    Box Inc. Publicly Files IPO
+    Give Me Back My Online Privacy
+
+The IRS also said that bitcoin "miners," including people who use computers to validate bitcoin transactions or maintain transaction ledgers, also would be subject to tax on payments they receive in bitcoin. And businesses would be subject to self-employment taxes.
+
+Other people who receive bitcoin for performing services—including employees as well as independent contractors—also would be subject to tax on the fair market value of the virtual currency, the IRS said.
+
+And in general, many bitcoin payments made by a business exceeding $600 in value—such as for rent, salaries, and wages—would be subject to information reporting to the IRS and to the payee.
+
+The IRS also said taxpayers may be subject to penalties for failure to comply with tax laws. The notice also applies to prior years.
+
+Mark Williams, a Boston University finance professor, said the IRS ruling "reduces the positive economics for bitcoin owners and miners," and could reduce liquidity in the bitcoin market and trim the number of miners or push them offshore.
+
+Omri Marian, a tax expert and assistant professor of law at the University of Florida, said the IRS requirement to report some bitcoin transactions worth more than $600 could be difficult to comply with because many bitcoin transactions are anonymous. And if bitcoin businesses are forced to withhold taxes, that could limit their appeal, he said.
+
+The IRS offered clarity about the tax treatment of virtual currencies, but it also left some questions open. For example, the Securities and Exchange Commission and other agencies are still studying whether bitcoin should be regulated, according to U.S. officials. 

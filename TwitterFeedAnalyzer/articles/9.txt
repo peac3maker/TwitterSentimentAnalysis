@@ -1,0 +1,15 @@
+Bitcoin withdrawal processing suspended
+
+Dear Bitstamp users
+
+Bitstamp’s exchange software is extremely cautious concerning Bitcoin transactions. Currently it has suspended processing Bitcoin withdrawals due to inconsistent results reported by our bitcoind wallet, caused by a denial-of-service attack using transaction malleability to temporarily disrupt balance checking. As such, Bitcoin withdrawal and deposit processing will be suspended temporarily until a software fix is issued.
+
+No funds have been lost and no funds are at risk.
+
+This is a denial-of-service attack made possible by some misunderstandings in Bitcoin wallet implementations. These misunderstandings have simple solutions that are being implemented as we speak, and we're confident everything will be back to normal shortly.
+
+Withdrawals which failed on the 10th and 11th of February will be canceled and the amounts added back to the customer account balances.
+
+We will communicate any further developments regarding this issue.
+
+Thank you for your understanding!

@@ -1,0 +1,29 @@
+
+
+Bitcoin is a new currency that was created in 2009 by an unknown person using the alias Satoshi Nakamoto. Transactions are made with no middle men – meaning, no banks! There are no transaction fees and no need to give your real name. More merchants are beginning to accept them: You can buy webhosting services, pizza or even manicures.
+Why Bitcoins?
+
+Bitcoins can be used to buy merchandise anonymously. In addition, international payments are easy and cheap because bitcoins are not tied to any country or subject to regulation. Small businesses may like them because there are no credit card fees. Some people just buy bitcoins as an investment, hoping that they’ll go up in value.
+Acquiring Bitcoins
+
+Buy on an Exchange
+Several marketplaces called “bitcoin exchanges” allow people to buy or sell bitcoins using different currencies. Mt. Gox is the largest bitcoin exchange.
+
+Transfers
+People can send bitcoins to each other using mobile apps or their computers. It’s similar to sending cash digitally.
+
+Mining
+People compete to “mine” bitcoins using computers to solve complex math puzzles. This is how bitcoins are created. Currently, a winner is rewarded with 25 bitcoins roughly every 10 minutes.
+Owning Bitcoins
+
+Bitcoins are stored in a “digital wallet,” which exists either in the cloud or on a user’s computer. The wallet is a kind of virtual bank account that allows users to send or receive bitcoins, pay for goods or save their money. Unlike bank accounts, bitcoin wallets are not insured by the FDIC.
+
+Wallet in cloud: Servers have been hacked. Companies have fled with clients’ Bitcoins.
+
+Wallet on computer: You can accidentally delete them. Viruses could destroy them.
+Anonymity
+
+Though each bitcoin transaction is recorded in a public log, names of buyers and sellers are never revealed – only their wallet IDs. While that keeps bitcoin users’ transactions private, it also lets them buy or sell anything without easily tracing it back to them. That’s why it has become the currency of choice for people online buying drugs or other illicit activities.
+Future in question
+
+No one knows what will become of bitcoin. It is mostly unregulated, but that could change. Governments are concerned about taxation and their lack of control over the currency.

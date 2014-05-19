@@ -1,0 +1,43 @@
+﻿Drop whatever you’re doing and go read Maciej Cegłowski’s absolutely magnificent essay Our Comrade The Electron, an astonishing history of the amazing Russian engineer Lev Sergeyevich Termen. Make sure you read right down to its punchline, “the most badass answer imaginable.” But if time is short, or you struggle to read English, please at least read its angry rant, from which I quote:
+
+    Technology concentrates power.
+
+    In the 90′s, it looked like the Internet might be an exception, that it could be a decentralizing, democratizing force … but those days are gone … What upsets me, what really gets my goat, is that we did it because it was the easiest thing to do … Making things ephemeral is hard. Making things distributed is hard. Making things anonymous is hard. Coming up with a sane business model is really hard—I get tired just thinking about it.
+
+    We put so much care into making the Internet resilient from technical failures, but make no effort to make it resilient to political failure. We treat freedom and the rule of law like inexhaustible natural resources, rather than the fragile and precious treasures that they are. And now, of course, it’s time to make the Internet of Things, where we will connect everything to everything else, and build cool apps on top, and nothing can possibly go wrong.
+
+He’s right. And so the Internet has, for most intents and purposes, evolved into a landscape dominated by centralized systems, epitomized by what Bruce Sterling calls the Stacks — Amazon, Apple, Facebook, Google, Microsoft. To quote, er, myself:
+
+    They don’t want much, those Stacks. Just your identity, your allegiance, and all of your data. Just to be your sole provider of messaging, media, merchandise, and metadata. Just to take part in as much of your online existence as they possibly can, and maybe to one day mediate your every interaction with the world around you, online or off.
+
+The Stacks exist in part because less centralized systems are extremely difficult to build. Consider, for instance, Google+ architect Yonatan Zunger’s explanation of “distributed consensus,” i.e. the means by which data can be safely preserved in distributed systems with multiple editors. It’s absolutely brilliant — but none of its 8,000 words are wasted. The gold-standard “Paxos” algorithm is sufficiently complex that a pair of Stanford engineers recently published a paper entitled “In Search Of An Understandable Consensus Algorithm” (PDF) — the title of which sums up the state of the art nicely — in which they present a new alternative, “Raft.”
+
+Distributed algorithms, distributed data, distributed systems, distributed security: messy, tricky, complicated, a maze of vibrating tightropes stretched across an N-dimensional pit full of hungry failure modes with sharp teeth. Hard stuff.
+
+But not impossible.
+
+Just ask Satoshi Nakamoto.
+
+Beyond the hype and the greed, Bitcoin is powered by a genuine technical breakthrough(1), to a degree I did not properly appreciate when I first started writing about it. The “blockchain” — the engine on which Bitcoin is built — is a new kind of distributed consensus system that allows transactions, or other data, to be securely stored and verified without any centralized authority at all, because (to grossly oversimplify) they are validated by the entire network. Those transactions don’t have to be financial; that data doesn’t have to be money. The engine that powers Bitcoin can be used for a whole array of other applications…
+
+…with one huge caveat. As Michael Nielsen puts it, in his excellent, detailed explanation of how Bitcoin actually works:
+
+    For [the blockchain] to have any chance of succeeding, network users need an incentive to help validate transactions. Without such an incentive, they have no reason to expend valuable computational power, merely to help validate other people’s transactions. And if network users are not willing to expend that power, then the whole system won’t work. The solution to this problem is to reward people who help validate transactions.
+
+Satoshi Nakamoto’s genius was twofold; technically, he built the world’s first(1) blockchain; socially, he lured people into powering it, using good old filthy lucre as an incentive. Which was very effective, but is now also a little awkward, as Bitcoin-as-a-currency has attracted a large number of … er … let’s diplomatically call them “colorful personalities,” and also, money-as-a-store-of-value is one field where in fact you probably do want some centralized authority, or at least insurance. I agree with the mordant observations on Twitter that it’s highly amusing watching the extremist fringes of the Bitcoin community slowly rediscover from first principles exactly why financial regulation exists in the first place.
+
+Meanwhile, though, the noise and smoke of the ongoing endless (and endlessly entertaining) Bitcoin sturm und drang has — ironically — obscured its real breakthrough; the blockchain.
+
+You see, it’s not that hard to imagine other blockchain-based systems which aren’t currencies and don’t attract as many “colorful personalities.” Suppose you replaced the Internet’s centralized Domain Name System with a blockchain for Internet names (like Namecoin) such that every DNS request included some proof-of-work effort. Or you used any blockchain (including Bitcoin’s) as a notary service. Or you built a new blockchain for crowdfunding. Or you replaced a centralized system which absolutely does need to be scrapped — that horrific barrel of worms known as TLS/SSL Certificate Authorities — with a blockchain-based solution powered at the browser level.
+
+Or you built a new distributed email service, with a blockchain for email addresses, and every time you checked your email you contributed to the network. Or a new distributed social network, with a blockchain verifying identities, powered by code that ran every time its users launched its app or visited its web page.
+
+(Technical note: this would obviously be a far more diffuse and granular system than Bitcoin’s, which runs on machines generally devoted 24/7 to mining. I don’t think that would require substantive changes to the algorithm, but while I’m a pretty good engineer I’m not an expert. That said, there’s no reason why a large number of relatively ephemeral clients would be fundamentally incompatible with a Hashcash-esque proof-of-work system, though I guess you might need a smaller subnet of persistent “supernodes” to maintain the blockchain.)
+
+To be clear, I’m not suggesting that some smart startup might turn around tomorrow and replace Gmail or Facebook with a blockchain-powered solution. But I am saying that some indeterminate number of years hence, as bandwidth improves, and processors grow ever more powerful, and storage gets ever cheaper, it’s not inconceivable that those massive server farms could be replaced, not with a “personal cloud” — a bad idea for many reasons — but by massive distributed peer-to-peer networks: open-source, encrypted end-to-end, and orchestrated in part by blockchains. I’m saying that I can at least envision, albeit vaguely, the decline of the Stacks. Which if you look at the Internet today seems like a pretty striking and revolutionary thing to say.
+
+For what it’s worth, I’m by no means alone in left field shouting that the blockchain is a big deal; heck, just look at Andreessen Horowitz over the last few months. And it seems likely that the blockchain, and Raft, and Spanner, and that great granddaddy of distributed peer-to-peer data called BitTorrent, are only the beginning; I expect more and more distributed-computing breakthroughs of comparable magnitude over the next decade, as the world’s searchlight minds turn to the forthcoming Internet Of Things.
+
+Last year I argued that “The Internet: we’re doing it wrong.” Now, though, only six months later, I see traces and hints that we’re finally making the first faltering motions towards doing it right. BitTorrent is thirteen years old, but it has only just now been done right (at least for pirates) in the form of Popcorn Time. Raft might be, in a sense, Paxos done right. Threadable looks like group communications done right (and, again, distributed, at least to the extent that email is distributed.) Keybase.io seems like a step towards PGP done right. TextSecure is cross-platform end-to-end-encrypted messaging done right.
+
+Maybe, just maybe, our online future is actually bright, and peer-to-peer, and encrypted end-to-end, and maybe even open-source and far less overtly commercial than today — and built, in part, on blockchains.

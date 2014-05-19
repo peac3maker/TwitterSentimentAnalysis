@@ -1,0 +1,63 @@
+Tracing a Bitcoin's Exchange's Fall From the Top to Shutdown
+Mark Karpelès hoped to set up a bitcoin cafe in the building where his exchange rented space.
+By
+Takashi Mochizuki ,
+Kathy Chu And
+Eleanor Warnock
+connect
+April 20, 2014 7:10 p.m. ET
+
+TOKYO—As Mt. Gox, once the pre-eminent exchange for buying and selling bitcoins, sank deeper into trouble late last year, a 28-year-old Frenchman in jeans and a T-shirt was busy focusing on coffees and pastries for a bitcoin cafe he planned to open in the same building where his company rented space.
+
+On Feb. 28 of this year, that Frenchman, Mark Karpelès, now in a suit and tie, bowed in apology as he explained that a stash of his digital currency worth nearly half a billion dollars had gone missing from the exchange's vaults, forcing it to seek bankruptcy protection. The company blamed hackers.
+A History of Mt. Gox
+View Graphics
+
+Its meltdown was a stunning reversal for a currency whose proponents had touted it as a potential replacement for paper money. Mt. Gox wasn't the only first-generation bitcoin exchange to run into trouble, but it was the largest—at its height handling 80% of all bitcoin trading.
+
+Last week, Mr. Karpelès's lawyers said their client wouldn't heed a U.S. Bankruptcy Court order to answer questions at a Dallas law firm on Thursday or a subpoena from the Treasury Department's Financial Crimes Enforcement Network, an anti-money-laundering division. Also last week, Mt. Gox agreed with a Tokyo court on the first step toward liquidation.
+
+The rise and fall of Mr. Karpelès, and Mt. Gox, offer a glimpse into the community of enthusiasts, technology experts and investors that propelled bitcoin from a nerdy experiment to a means of exchange accepted by thousands of retailers, consumers and companies.
+Related Article
+
+    U.S. Investor Says Creditors Support Mt. Gox Buyout
+
+Interviews with people close to the exchange, as well as company documents and Mr. Karpelès's comments on blogs and social media, paint a picture of the Mt. Gox chief as a geek—fascinated with trading cards and anime—who fell into his central role in the burgeoning bitcoin world but was unable to cope with the ballooning size and importance of his company.
+
+Mr. Karpelès was part of a small community of early bitcoin enthusiasts who set up the infrastructure for the use of bitcoin as a currency that helped persuade another wave of investors to pile in. Some of them were looking for the next big thing, while others were skeptical of banks and their fees and wanted a convenient and cheap way to transfer money.
+
+WSJD is the Journal's home for tech news, analysis and product reviews.
+
+    How Facebook Balked at Tech's Alleged Hiring Circle
+    Square Discusses Possible Sale
+    Apple, Google Vie for Game Apps
+    Police Grapple With Cybercrime
+    Fallen Bitcoin Titan Focused on Cafe
+
+"It was similar to the early days of the Internet," said Bobby Lee, an early bitcoin adopter who is now chief executive of bitcoin exchange BTC China. "There was no infrastructure and no secure way to store bitcoin," he said. "It was just this Wild West thing."
+
+Bitcoin became big news in 2013. In January, one bitcoin, at $13, could pay for lunch or a haircut at those merchants using it. A few months later, a Norwegian man who had bought around 5,000 bitcoins for around $24 in 2009 in the course of writing a thesis on encryption checked his balance and found he was able to afford an apartment in central Oslo.
+
+Mt. Gox became the major place for buying and selling bitcoin. By the end of November, bitcoin prices had soared to $1,200 on Mt. Gox. The next month, Mt. Gox said it had reached one million customers. But neither Mt. Gox nor Mr. Karpelès was prepared to handle such volume.
+
+As 2013 started, Mt. Gox, which made its revenue from fees it collected on bitcoin transactions, looked like a smashing success. According to Bitcoin Charts, a bitcoin data provider, Mt. Gox processed trading volume of about 150,000 bitcoins a day around mid-May.
+
+Then cracks appeared. In May, the U.S. Department of Homeland Security seized Mt. Gox funds in the U.S. under a federal money-laundering statute. In all, it seized more than $5 million between May and July, prompting Mt. Gox to get a U.S. money-transfer license. Mr. Karpelès hasn't been charged with wrongdoing.
+How Mt. Gox Unraveled
+View Graphics
+
+In June, Mt. Gox temporarily halted withdrawals in dollars, saying it needed to make system improvements.
+
+The U.S. move scared Mizuho Bank, which handled Mt. Gox business at a branch in Tokyo, according to people familiar with the situation. Over the next few months, it pressured Mt. Gox to close its account, with complaints growing increasingly loud as wire-transfer requests piled up, the people said.
+
+The challenges tested Mr. Karpelès's management skills. At Mt. Gox's peak, it had no more than 35 to 40 employees. Mr. Karpelès often micromanaged, preparing his own Federal Express packages or ordering bottles of water, according to a person close to Mt. Gox.
+
+But realizing the company needed help with regulatory matters, he hired a veteran chief compliance officer in October.
+
+With Mizuho stalling, cash withdrawals were facing growing delays. By January, dozens of angry customers were calling Mt. Gox's offices in Tokyo each day. Employees not used to dealing directly with customers tried to pass the phones off to each other, according to people familiar with Mt. Gox.
+
+One of the people said that for some of this time in early 2014, the CEO sat in his office watching anime or episodes of "Breaking Bad," and complained he was gaining weight. At a time when Mt. Gox needed to tightly seal its systems and find new banks, Mr. Karpelès concentrated on what to serve in the planned bitcoin cafe, consulting with French chefs and coffee experts, the person said. "He had more meetings about the bitcoin cafe than about getting banks or doing business," said the person.
+
+Around Feb. 21, Mr. Karpelès began to realize the seriousness of the technical issues. That weekend, he told company officials and outside advisers that hundreds of thousands of bitcoin had disappeared. Mt. Gox completely shut down on Feb. 25.
+
+Employees were left in the dark until the very end. Stepping out of Mt. Gox's office for a smoke in late February, one worker murmured, "I am not sure what's happening. I am scared."
