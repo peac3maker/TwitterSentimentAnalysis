@@ -59,16 +59,16 @@
             // 
             chartArea1.Name = "ChartArea1";
             this.chart.ChartAreas.Add(chartArea1);
-            this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chart.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend1.Name = "Legend1";
             this.chart.Legends.Add(legend1);
-            this.chart.Location = new System.Drawing.Point(0, 0);
+            this.chart.Location = new System.Drawing.Point(0, 49);
             this.chart.Name = "chart";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart.Series.Add(series1);
-            this.chart.Size = new System.Drawing.Size(1326, 491);
+            this.chart.Size = new System.Drawing.Size(1326, 442);
             this.chart.TabIndex = 2;
             this.chart.Text = "chart1";
             // 
@@ -104,7 +104,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chart);
             this.Name = "Form1";
-            this.Text = "yxzzzzzxxxx";
+            this.Text = "7";
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

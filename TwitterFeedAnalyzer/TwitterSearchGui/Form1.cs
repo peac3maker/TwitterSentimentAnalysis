@@ -33,29 +33,32 @@ namespace TwitterSearchGui
                 return;
             }
 
-            List<Document> results = search.PerformSearch(textBox1.Text);
-            List<string> dates = new List<string>();
-            List<int> amounts = new List<int>();
-            int amount = 0;
-            foreach (Document doc in results.OrderBy(d => DateTime.Parse(d.Get("created")).Date))
-            {                
-                string date = DateTime.Parse(doc.Get("created")).Date.ToString();
-                if (!dates.Contains(date))
-                {
-                    if (dates.Count > 0)
-                    {
-                        amounts.Add(amount);
-                    }
-                    dates.Add(date);
-                }
-                amount++;
-            }
-            amounts.Add(amount);
-            string[] datesArray = dates.ToArray();
-            int[] amountsArray = amounts.ToArray();
+            //List<Document> results = search.PerformSearch(textBox1.Text);
+            //List<string> dates = new List<string>();
+            //List<int> amounts = new List<int>();
+            //int amount = 0;
+            //foreach (Document doc in results.OrderBy(d => DateTime.Parse(d.Get("created")).Date))
+            //{                
+            //    string date = DateTime.Parse(doc.Get("created")).Date.ToString();
+            //    if (!dates.Contains(date))
+            //    {
+            //        if (dates.Count > 0)
+            //        {
+            //            amounts.Add(amount);
+            //        }
+            //        dates.Add(date);
+            //    }
+            //    amount++;
+            //}
+            //amounts.Add(amount);
+            //string[] datesArray = dates.ToArray();
+            //int[] amountsArray = amounts.ToArray();
+            string[] datesArray;
+            int[] amountsArray;
+            search.PerformAmountSearch(textBox1.Text, out datesArray, out amountsArray);
             // Add series.
             this.chart.Series.Clear();
-            this.chart.ChartAreas[0].AxisY.Maximum = amounts.Max();
+            this.chart.ChartAreas[0].AxisY.Maximum = amountsArray.Max()+50;
             for (int i = 0; i < datesArray.Length; i++)
             {
                 // Add series.
@@ -70,6 +73,7 @@ namespace TwitterSearchGui
         private void btnFolder_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dia = new FolderBrowserDialog();
+            dia.SelectedPath = @"C:\temp\LuceneIndex";
             DialogResult res = dia.ShowDialog();
             if (res != System.Windows.Forms.DialogResult.OK)
             {
