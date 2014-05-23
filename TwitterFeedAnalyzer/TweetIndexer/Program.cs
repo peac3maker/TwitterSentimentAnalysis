@@ -24,25 +24,28 @@ namespace TweetIndexer
             MongoServer mongoServer = mongoClient.GetServer();
             MongoDatabase db = mongoServer.GetDatabase("test");
             var collection = db.GetCollection<TweetItem>("TweetItems");
-            DateTime dtmFirst = new DateTime(2014, 05, 17);
-            DateTime dtmLast = DateTime.Now;
-            dtmLast = dtmLast.AddHours(-dtmLast.Hour);
-            dtmLast = dtmLast.AddMinutes(-dtmLast.Minute);
-            var query = Query<TweetItem>.Where(t => t.CreationDate >= dtmFirst);
-            List<TweetItem> value = collection.Find(query).ToList();
+            DateTime dtmFirst = new DateTime(2014, 05, 17,0,0,0);
+            DateTime dtmLast = new DateTime(2014, 05, 17, 23, 59, 59);
             FSDirectory dir = FSDirectory.GetDirectory(Environment.CurrentDirectory + "\\LuceneIndex");
             //Lucene.Net.Store.RAMDirectory dir = new RAMDirectory();
             Lucene.Net.Analysis.StopAnalyzer an = new Lucene.Net.Analysis.StopAnalyzer();
             IndexWriter wr = new IndexWriter(dir, an, true);
-            //DirectoryInfo diMain = new DirectoryInfo(dia.SelectedPath);
-            foreach (TweetItem tweet in value)
+            while (dtmFirst.Date <= DateTime.Now.Date)
             {
-                Document doc = new Document();
-                doc.Add(new Field("id", tweet._id.ToString(), Field.Store.YES, Field.Index.NO));
-                doc.Add(new Field("created", tweet.CreationDate.ToString(), Field.Store.YES, Field.Index.NO));
-                doc.Add(new Field("user", tweet.User, Field.Store.YES, Field.Index.NO));
-                doc.Add(new Field("text", tweet.Text, Field.Store.YES, Field.Index.TOKENIZED, Field.TermVector.YES));
-                wr.AddDocument(doc);
+                var query = Query<TweetItem>.Where(t => t.CreationDate >= dtmFirst && t.CreationDate <= dtmLast);
+                List<TweetItem> value = collection.Find(query).ToList();                
+                //DirectoryInfo diMain = new DirectoryInfo(dia.SelectedPath);
+                foreach (TweetItem tweet in value)
+                {
+                    Document doc = new Document();
+                    doc.Add(new Field("id", tweet._id.ToString(), Field.Store.YES, Field.Index.NO));
+                    doc.Add(new Field("created", tweet.CreationDate.ToString(), Field.Store.YES, Field.Index.NO));
+                    doc.Add(new Field("user", tweet.User, Field.Store.YES, Field.Index.NO));
+                    doc.Add(new Field("text", tweet.Text, Field.Store.YES, Field.Index.TOKENIZED, Field.TermVector.YES));
+                    wr.AddDocument(doc);
+                }
+                dtmFirst = dtmFirst.AddDays(1);
+                dtmLast = dtmLast.AddDays(1);
             }
             wr.Optimize();
             wr.Flush();
