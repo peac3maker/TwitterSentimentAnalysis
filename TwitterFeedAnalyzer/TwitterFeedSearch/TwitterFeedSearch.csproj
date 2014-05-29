@@ -53,6 +53,37 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Repository\en-sent.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Repository\en-token.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Repository\Negative.Evidence.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Repository\Positive.Evidence.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DragonHelper\DragonHelper.csproj">
+      <Project>{bb8fa40c-f2f8-4ad5-999c-2e3981f9b6b8}</Project>
+      <Name>DragonHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sentiment.Analysis.Interfaces\Sentiment.Analysis.Interfaces.csproj">
+      <Project>{1db5db2b-48fe-4454-8f2d-11f8a6436cee}</Project>
+      <Name>Sentiment.Analysis.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrainTheDragon\DragonClassifier.csproj">
+      <Project>{938b1c88-d4a1-40ba-99d4-51d4260c3f76}</Project>
+      <Name>DragonClassifier</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Repository\ExcludedTokens.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

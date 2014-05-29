@@ -55,7 +55,9 @@ namespace TwitterSearchGui
             //int[] amountsArray = amounts.ToArray();
             string[] datesArray;
             int[] amountsArray;
-            search.PerformAmountSearch(textBox1.Text, out datesArray, out amountsArray);
+            int[] positiveArray;
+            int[] negativeArray;
+            search.PerformAmountSearch(textBox1.Text, out datesArray, out amountsArray, out positiveArray, out negativeArray);
             // Add series.
             this.chart.Series.Clear();
             this.chart.ChartAreas[0].AxisY.Maximum = amountsArray.Max()+50;
@@ -66,7 +68,10 @@ namespace TwitterSearchGui
 
                 // Add point.
                 series.Points.Add(amountsArray[i]);
-            }
+
+                series.Points.Add(positiveArray[i]);
+                series.Points.Add(negativeArray[i]);
+            }            
             
         }
 
