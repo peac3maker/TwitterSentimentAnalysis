@@ -1,5 +1,6 @@
 ﻿using DragonClassifier;
 using Lucene.Net.Documents;
+using Lucene.Net.Index;
 using Lucene.Net.QueryParsers;
 using Lucene.Net.Search;
 using Lucene.Net.Store;
@@ -116,6 +117,39 @@ namespace TwitterFeedSearch
             amountsArray = amounts.ToArray();
             positiveArray = positiveAmounts.ToArray();
             negativeArray = negativeAmounts.ToArray();
+        }
+
+        public void GetDocuments(out List<Document> documents,out Dictionary<string, int> positiveTerms, out Dictionary<string, int> negativeTerms)
+        {
+            positiveTerms = new Dictionary<string, int>();
+            negativeTerms = new Dictionary<string, int>();
+            documents = new List<Document>();
+            IndexReader reader = IndexReader.Open(dir);            
+            
+
+            for (int i = 0; i < 10000; i++ )
+            {
+                if (reader.IsDeleted(i))
+                    continue;
+                TermFreqVector[] vectors = reader.GetTermFreqVectors(i);
+                if (vectors == null)
+                {
+                    continue;
+                }
+                foreach (TermFreqVector vector in vectors)
+                {
+                    foreach (string term in vector.GetTerms())
+                    {
+                        if (!positiveTerms.ContainsKey(term))
+                        {
+                            positiveTerms.Add(term, 0);
+                            negativeTerms.Add(term, 0);
+                        }
+                    }
+                }
+                documents.Add(reader.Document(i));
+            }
+
         }
         
     }
