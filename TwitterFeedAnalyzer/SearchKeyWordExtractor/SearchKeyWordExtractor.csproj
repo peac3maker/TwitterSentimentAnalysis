@@ -76,9 +76,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Repository\en-sent.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Repository\en-token.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NLPToolkit\NLPToolkit.csproj">
+      <Project>{8a9808db-71fa-44ba-b562-f2903f669045}</Project>
+      <Name>NLPToolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StemmersNet\StemmersNet.csproj">
+      <Project>{8f8c88dd-f172-4964-a49c-976437c7b538}</Project>
+      <Name>StemmersNet</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Repository\ExcludedTokens.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

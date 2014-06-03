@@ -1,4 +1,5 @@
 ﻿using DragonClassifier;
+using Iveonik.Stemmers;
 using Lucene.Net.Documents;
 using Lucene.Net.Index;
 using Lucene.Net.QueryParsers;
@@ -18,6 +19,7 @@ namespace TwitterFeedSearch
         Lucene.Net.Analysis.StopAnalyzer an = new Lucene.Net.Analysis.StopAnalyzer();
         IndexSearcher searcher = null;
         Classifier classifier = null;
+        IStemmer stemmer = new EnglishStemmer();
         public TwitterFeedSearcher(string directoryPath)
         {
             dir = FSDirectory.GetDirectory(directoryPath);
@@ -80,6 +82,7 @@ namespace TwitterFeedSearch
             int amount = 0;
             int positiveAmount = 0;
             int negativeAmount = 0;
+            strQuery = PerformStemming(stemmer,NLPToolkit.Tokenizer.TokenizeNow(strQuery).ToArray());
             Query query = new QueryParser("text", an).Parse(strQuery);
             Hits results = searcher.Search(query, Sort.INDEXORDER);
             for (int i = 0; i < results.Length(); i++)
@@ -150,6 +153,23 @@ namespace TwitterFeedSearch
                 documents.Add(reader.Document(i));
             }
 
+        }
+
+        public string PerformStemming(IStemmer stemmer, string[] words)
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach (string word in words)
+            {
+                if (builder.ToString().Length == 0)
+                {
+                    builder.Append(stemmer.Stem(word));
+                }
+                else
+                {
+                    builder.AppendFormat(" {0}", stemmer.Stem(word));
+                }
+            }
+            return builder.ToString();
         }
         
     }

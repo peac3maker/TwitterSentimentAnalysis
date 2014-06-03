@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using TwitterFeedSearch;
 using NLPToolkit;
 using System.IO;
+using Iveonik.Stemmers;
 
 namespace CreateTwitterSentiments
 {
@@ -21,6 +22,7 @@ namespace CreateTwitterSentiments
         Dictionary<string, int> negativeTerms = new Dictionary<string, int>();
         int docNumber = 0;
         List<Document> documents;
+        IStemmer stemmer = new EnglishStemmer();
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace CreateTwitterSentiments
             searcher.GetDocuments(out documents, out positiveTerms, out negativeTerms);
             textBox1.Text = documents[0].Get("text");
             docNumber++;
-        }
+        } 
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -126,6 +128,22 @@ namespace CreateTwitterSentiments
                     file.WriteLine(val.Key + "," + val.Value);
                 }
             }        
+        }
+
+        public List<string> PerformStemming(IStemmer stemmer, string[] words)
+        {
+            List<string> stemmedWords = new List<string>();
+            foreach (string word in words)
+            {
+                stemmedWords.Add(stemmer.Stem(word));                
+            }
+            return stemmedWords;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {            
+            textBox1.Text = documents[docNumber].Get("text");
+            docNumber++;
         }
     }
 }

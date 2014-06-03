@@ -60,17 +60,26 @@ namespace TwitterSearchGui
             search.PerformAmountSearch(textBox1.Text, out datesArray, out amountsArray, out positiveArray, out negativeArray);
             // Add series.
             this.chart.Series.Clear();
-            this.chart.ChartAreas[0].AxisY.Maximum = amountsArray.Max()+50;
+            this.chart.ChartAreas[0].AxisY.Maximum = amountsArray.Max()+20;            
+
+            this.chart1.Series.Clear();
+            this.chart1.ChartAreas[0].AxisY.Maximum = positiveArray.Max() + 20;
+            this.chart1.ChartAreas[0].AxisY.Minimum = -negativeArray.Max() - 20;
             for (int i = 0; i < datesArray.Length; i++)
             {
                 // Add series.
                 Series series = this.chart.Series.Add(datesArray[i]);
+                //series.ChartType = SeriesChartType.Spline;
 
                 // Add point.
                 series.Points.Add(amountsArray[i]);
 
                 series.Points.Add(positiveArray[i]);
                 series.Points.Add(negativeArray[i]);
+
+                Series series2 = this.chart1.Series.Add(datesArray[i]);
+                //series2.ChartType = SeriesChartType.SplineArea;
+                series2.Points.Add(positiveArray[i] - negativeArray[i]);
             }            
             
         }

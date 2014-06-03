@@ -83,6 +83,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalLibs", "ExternalLib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateTwitterSentiments", "CreateTwitterSentiments\CreateTwitterSentiments.csproj", "{11F1B0EE-2AB1-4314-B240-42A2D88FFB14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StemmersNet", "StemmersNet\StemmersNet.csproj", "{8F8C88DD-F172-4964-A49C-976437C7B538}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{11F1B0EE-2AB1-4314-B240-42A2D88FFB14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11F1B0EE-2AB1-4314-B240-42A2D88FFB14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11F1B0EE-2AB1-4314-B240-42A2D88FFB14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F8C88DD-F172-4964-A49C-976437C7B538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F8C88DD-F172-4964-A49C-976437C7B538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F8C88DD-F172-4964-A49C-976437C7B538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F8C88DD-F172-4964-A49C-976437C7B538}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

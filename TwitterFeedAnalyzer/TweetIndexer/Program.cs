@@ -1,4 +1,5 @@
-﻿using Lucene.Net.Documents;
+﻿using Iveonik.Stemmers;
+using Lucene.Net.Documents;
 using Lucene.Net.Index;
 using Lucene.Net.Store;
 using MongoDB.Driver;
@@ -28,8 +29,9 @@ namespace TweetIndexer
             DateTime dtmLast = new DateTime(2014, 05, 17, 23, 59, 59);
             FSDirectory dir = FSDirectory.GetDirectory(Environment.CurrentDirectory + "\\LuceneIndex");
             //Lucene.Net.Store.RAMDirectory dir = new RAMDirectory();
-            Lucene.Net.Analysis.StopAnalyzer an = new Lucene.Net.Analysis.StopAnalyzer();
+            Lucene.Net.Analysis.StopAnalyzer an = new Lucene.Net.Analysis.StopAnalyzer();            
             IndexWriter wr = new IndexWriter(dir, an, true);
+            IStemmer stemmer = new EnglishStemmer();
             while (dtmFirst.Date <= DateTime.Now.Date)
             {
                 var query = Query<TweetItem>.Where(t => t.CreationDate >= dtmFirst && t.CreationDate <= dtmLast);
@@ -41,7 +43,7 @@ namespace TweetIndexer
                     doc.Add(new Field("id", tweet._id.ToString(), Field.Store.YES, Field.Index.NO));
                     doc.Add(new Field("created", tweet.CreationDate.ToString(), Field.Store.YES, Field.Index.NO));
                     doc.Add(new Field("user", tweet.User, Field.Store.YES, Field.Index.NO));
-                    doc.Add(new Field("text", tweet.Text, Field.Store.YES, Field.Index.TOKENIZED, Field.TermVector.YES));
+                    doc.Add(new Field("text", PerformStemming(stemmer,NLPToolkit.Tokenizer.TokenizeNow(tweet.Text).ToArray()), Field.Store.YES, Field.Index.TOKENIZED, Field.TermVector.YES));
                     wr.AddDocument(doc);
                 }
                 dtmFirst = dtmFirst.AddDays(1);
@@ -51,6 +53,23 @@ namespace TweetIndexer
             wr.Flush();
             wr.Close();
             dir.Close();
+        }
+
+        public static string PerformStemming(IStemmer stemmer, string[] words)
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach (string word in words)
+            {
+                if (builder.ToString().Length == 0)
+                {
+                    builder.Append(stemmer.Stem(word));
+                }
+                else
+                {
+                    builder.AppendFormat(" {0}", stemmer.Stem(word));
+                }
+            }
+            return builder.ToString();
         }
     }
 }

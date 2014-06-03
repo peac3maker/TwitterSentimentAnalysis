@@ -13,6 +13,7 @@ using Lucene.Net.Store;
 using Lucene.Net.Documents;
 using System.IO;
 using Lucene.Net.Search;
+using Iveonik.Stemmers;
 
 namespace SearchKeyWordExtractor
 {
@@ -36,11 +37,13 @@ namespace SearchKeyWordExtractor
             //Lucene.Net.Store.RAMDirectory dir = new RAMDirectory();
             Lucene.Net.Analysis.StopAnalyzer an = new Lucene.Net.Analysis.StopAnalyzer();
             IndexWriter wr = new IndexWriter(dir, an,true);
+            IStemmer stemmer = new EnglishStemmer();
             DirectoryInfo diMain = new DirectoryInfo(dia.SelectedPath);
             foreach(FileInfo fi in diMain.GetFiles()){
                 Document doc = new Document();
                 doc.Add(new Field("title", fi.Name,Field.Store.YES, Field.Index.NO));
-                doc.Add(new Field("text", File.ReadAllText(fi.FullName),Field.Store.YES, Field.Index.TOKENIZED,Field.TermVector.YES));                
+                //doc.Add(new Field("text", File.ReadAllText(fi.FullName),Field.Store.YES, Field.Index.TOKENIZED,Field.TermVector.YES));
+                doc.Add(new Field("text", PerformStemming(stemmer,NLPToolkit.Tokenizer.TokenizeNow(File.ReadAllText(fi.FullName)).ToArray()), Field.Store.YES, Field.Index.TOKENIZED, Field.TermVector.YES));
                 wr.AddDocument(doc);
             }
             wr.Optimize();
@@ -74,12 +77,24 @@ namespace SearchKeyWordExtractor
             //foreach (ScoreDoc doc in hits.ScoreDocs)
             //{
             //    textBox1.Text += doc.Score + Environment.NewLine;
-            //}
+            //}                                                            
             
-                        
-            
-            
-            
+        }
+        public string PerformStemming(IStemmer stemmer, string[] words)
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach (string word in words)
+            {
+                if (builder.ToString().Length == 0)
+                {
+                    builder.Append(stemmer.Stem(word));
+                }
+                else
+                {
+                    builder.AppendFormat(" {0}", stemmer.Stem(word));
+                }
+            }
+            return builder.ToString();
         }
     }
 }
