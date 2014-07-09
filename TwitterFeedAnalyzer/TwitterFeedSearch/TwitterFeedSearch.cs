@@ -20,6 +20,7 @@ namespace TwitterFeedSearch
         IndexSearcher searcher = null;
         Classifier classifier = null;
         IStemmer stemmer = new EnglishStemmer();
+        int tolerance = 15;
         public TwitterFeedSearcher(string directoryPath)
         {
             dir = FSDirectory.GetDirectory(directoryPath);
@@ -89,6 +90,63 @@ namespace TwitterFeedSearch
             {
                 Document doc = results.Doc(i);
                 string date = DateTime.Parse(doc.Get("created")).Date.ToString();
+                if (!dates.Contains(date))
+                {
+                    if (dates.Count > 0)
+                    {
+                        amounts.Add(amount);
+                        positiveAmounts.Add(positiveAmount);
+                        negativeAmounts.Add(negativeAmount);
+                    }
+                    amount = 0;
+                    positiveAmount = 0;
+                    negativeAmount = 0;
+                    dates.Add(date);
+                }
+                amount++;
+                //var scores = classifier.Classify(doc.Get("text"), DragonHelper.DragonHelper.ExcludeList);
+                double positive = Convert.ToDouble(doc.Get("possentiment"));
+                double negative = Convert.ToDouble(doc.Get("negsentiment"));
+                if (positive > negative+15)
+                {
+                    positiveAmount++;
+                }
+                else if (negative > positive + 15)
+                {
+                    negativeAmount++;
+                }
+            }
+            amounts.Add(amount);
+            positiveAmounts.Add(positiveAmount);
+            negativeAmounts.Add(negativeAmount);
+            datesArray = dates.ToArray();
+            amountsArray = amounts.ToArray();
+            positiveArray = positiveAmounts.ToArray();
+            negativeArray = negativeAmounts.ToArray();
+        }
+
+        public void PerformAmountSearchIntraDay(string strQuery, out string[] datesArray, out int[] amountsArray, out int[] positiveArray, out int[] negativeArray, DateTime currentDate)
+        {
+            List<Document> tweets = new List<Document>();
+            List<string> dates = new List<string>();
+            List<int> amounts = new List<int>();
+            List<int> positiveAmounts = new List<int>();
+            List<int> negativeAmounts = new List<int>();
+            int amount = 0;
+            int positiveAmount = 0;
+            int negativeAmount = 0;
+            strQuery = PerformStemming(stemmer, NLPToolkit.Tokenizer.TokenizeNow(strQuery).ToArray());
+            Query query = new QueryParser("text", an).Parse(strQuery);
+            Hits results = searcher.Search(query, Sort.INDEXORDER);
+            for (int i = 0; i < results.Length(); i++)
+            {
+                Document doc = results.Doc(i);
+                DateTime dateTime = DateTime.Parse(doc.Get("created"));
+                if (dateTime.Date != currentDate.Date)
+                {
+                    continue;
+                }
+                string date = dateTime.Date.ToString() + " " + dateTime.Hour;
                 if (!dates.Contains(date))
                 {
                     if (dates.Count > 0)

@@ -60,6 +60,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -119,13 +121,25 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DragonHelper\DragonHelper.csproj">
+      <Project>{bb8fa40c-f2f8-4ad5-999c-2e3981f9b6b8}</Project>
+      <Name>DragonHelper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NLPToolkit\NLPToolkit.csproj">
       <Project>{8a9808db-71fa-44ba-b562-f2903f669045}</Project>
       <Name>NLPToolkit</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sentiment.Analysis.Interfaces\Sentiment.Analysis.Interfaces.csproj">
+      <Project>{1db5db2b-48fe-4454-8f2d-11f8a6436cee}</Project>
+      <Name>Sentiment.Analysis.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StemmersNet\StemmersNet.csproj">
       <Project>{8f8c88dd-f172-4964-a49c-976437c7b538}</Project>
       <Name>StemmersNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrainTheDragon\DragonClassifier.csproj">
+      <Project>{938b1c88-d4a1-40ba-99d4-51d4260c3f76}</Project>
+      <Name>DragonClassifier</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

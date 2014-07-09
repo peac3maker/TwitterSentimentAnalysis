@@ -34,8 +34,8 @@ namespace SearchKeyWordExtractor
             }
 
             FSDirectory dir = FSDirectory.GetDirectory(Environment.CurrentDirectory + "\\LuceneIndex");
-            //Lucene.Net.Store.RAMDirectory dir = new RAMDirectory();
-            Lucene.Net.Analysis.StopAnalyzer an = new Lucene.Net.Analysis.StopAnalyzer();
+            //Lucene.Net.Store.RAMDirectory dir = new RAMDirectory();           
+            Lucene.Net.Analysis.Standard.StandardAnalyzer an = new Lucene.Net.Analysis.Standard.StandardAnalyzer();
             IndexWriter wr = new IndexWriter(dir, an,true);
             IStemmer stemmer = new EnglishStemmer();
             DirectoryInfo diMain = new DirectoryInfo(dia.SelectedPath);
